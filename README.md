@@ -1,5 +1,7 @@
 # Emay SMS client
 
+![badge](https://img.shields.io/hexpm/v/emay.svg)
+
 ## Installation and config
 
 ```elixir

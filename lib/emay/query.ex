@@ -22,7 +22,17 @@ defmodule Emay.Query do
                        message: "#{@signature} #{content}"]},
       timeout: @timeout) do
 
-      {:ok, _} -> :ok
+      {:ok, res} ->
+        case res
+             |> Map.get(:body)
+             |> String.strip
+             |> xpath(~x"//error/text()")
+             |>List.to_integer do
+          0 ->
+            :ok
+          error_code ->
+            {:error, error_code}
+        end
       _ -> :error
     end
   end

@@ -3,7 +3,7 @@ defmodule Emay.Mixfile do
 
   def project do
     [app: :emay,
-     version: "0.2.0",
+     version: "1.0.0",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -41,7 +41,7 @@ defmodule Emay.Mixfile do
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/ZhuyiHome/emay"}]
   end
-  
+
   defp description do
     """
     Send SM via Emay(亿美软通)

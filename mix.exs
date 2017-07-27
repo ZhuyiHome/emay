@@ -1,9 +1,11 @@
 defmodule Emay.Mixfile do
   use Mix.Project
 
+  @version "1.0.1"
+
   def project do
     [app: :emay,
-     version: "1.0.0",
+     version: @version,
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -30,7 +32,9 @@ defmodule Emay.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:httpoison, "~> 0.10.0"},{:sweet_xml, "~> 0.6.3"},{:ex_doc, ">= 0.0.0", only: :dev}]
+    [{:httpoison, "~> 0.12"},
+     {:sweet_xml, "~> 0.6.3"},
+     {:ex_doc, ">= 0.0.0", only: :dev}]
   end
 
   defp package do
